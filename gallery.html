@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Chhara & Sami</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">C & S</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+        </div>
+    </header>
+
+    <!-- Gallery Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-tab="haldi">Haldi</button>
+                <button class="tab-btn" data-tab="wedding">Wedding Ceremony</button>
+                <button class="tab-btn" data-tab="honeymoon">Honeymoon</button>
+            </div>
+
+            <div class="tab-content active" id="haldi">
+                <div class="gallery-grid">
+                    <!-- Haldi Images -->
+                    <div class="gallery-item"><img src="haldi images/WhatsApp Image 2025-12-24 at 23.09.17.jpeg" alt="Haldi Moment"></div>
+                    <div class="gallery-item"><img src="haldi images/WhatsApp Image 2025-12-24 at 23.09.18.jpeg" alt="Haldi Moment"></div>
+                    <div class="gallery-item"><img src="haldi images/WhatsApp Image 2025-12-24 at 23.09.44.jpeg" alt="Haldi Moment"></div>
+                    <div class="gallery-item"><img src="haldi images/WhatsApp Image 2025-12-24 at 23.09.4a.jpeg" alt="Haldi Moment"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="wedding">
+                <div class="coming-soon">
+                    <h2>Coming Soon...</h2>
+                    <p>Stay tuned for the beautiful moments from our big day!</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="honeymoon">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/L178UzLIMRE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made for &hearts; for Chhara & Sami</p>
+            <p>&copy; Nexily</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
