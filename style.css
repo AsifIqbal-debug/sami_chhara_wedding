@@ -475,9 +475,39 @@ footer p {
     .headline {
         font-size: 2.5rem;
     }
+
+    .hamburger {
+        display: block;
+        color: var(--text-color);
+        font-size: 1.5rem;
+    }
     
     .nav-links {
-        display: none; /* Hide for now, can add toggle JS later */
+        position: fixed;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #fff; /* Opaque white background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%; /* Slide out from right */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 999;
+        padding-top: 3rem;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 2rem;
+        opacity: 0; /* Fade in animation */
+        animation: navLinkFade 0.5s ease forwards 0.3s;
     }
 
     .countdown {
@@ -486,5 +516,44 @@ footer p {
     
     .time-box span {
         font-size: 1.5rem;
+    }
+
+    /* Lightbox Mobile Adjustments */
+    .lightbox-content {
+        width: 95%;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .close-lightbox {
+        right: 20px;
+        top: 10px;
+    }
+
+    #caption {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

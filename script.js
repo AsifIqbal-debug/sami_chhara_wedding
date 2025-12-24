@@ -42,9 +42,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({
                 behavior: 'smooth'
             });
+            // Close mobile menu if open
+            navLinks.classList.remove('active');
         }
     });
 });
+
+// Mobile Menu Logic
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
 
 // Gallery Tabs Logic
 const tabBtns = document.querySelectorAll('.tab-btn');
